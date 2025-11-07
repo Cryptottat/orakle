@@ -49,6 +49,7 @@
 }
 
 .loading-logo {
+  font-family: var(--font-surgena, 'Surgena', sans-serif);
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 700;
   letter-spacing: -0.03em;
