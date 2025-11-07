@@ -15,6 +15,9 @@ export default function Header() {
           <span className="logo-text">orakle</span>
         </Link>
         <nav className="header-nav">
+          <a href="https://pump.fun/coin/3P3UCekWMDnfXPawuZN7MDptZSz8z4xukM4FkguTpump" target="_blank" rel="noopener noreferrer" className="nav-link">
+            $ORKL
+          </a>
           <a href="https://x.com/orakledotnet" target="_blank" rel="noopener noreferrer" className="nav-link">
             x
           </a>
