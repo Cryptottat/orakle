@@ -4,7 +4,8 @@ import './Header.css'
 export default function Header() {
   const location = useLocation()
   const isHome = location.pathname === '/'
-  const isDocs = !isHome
+  const isApp = location.pathname.startsWith('/app')
+  const isDocs = !isHome && !isApp
 
   return (
     <header className="header">
@@ -20,9 +21,9 @@ export default function Header() {
           <Link to="/introduction/overview/what-is-orakle" className={`nav-link ${isDocs ? 'active' : ''}`}>
             docs
           </Link>
-          <a href="https://app.orakle.com" target="_blank" rel="noopener noreferrer" className="nav-link">
+          <Link to="/app" className={`nav-link ${isApp ? 'active' : ''}`}>
             app
-          </a>
+          </Link>
         </nav>
       </div>
     </header>

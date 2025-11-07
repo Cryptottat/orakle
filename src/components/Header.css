@@ -92,19 +92,24 @@
   z-index: -1;
 }
 
-.nav-link:hover {
+.nav-link:hover:not(.active) {
   color: #4CAF50;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(76, 175, 80, 0.15);
 }
 
-.nav-link:hover::before {
+.nav-link:hover:not(.active)::before {
   opacity: 1;
 }
 
 .nav-link.active {
   color: #4CAF50;
   background: rgba(76, 175, 80, 0.1);
+}
+
+.nav-link.active:hover {
+  transform: none;
+  box-shadow: none;
 }
 
 @media (max-width: 768px) {
