@@ -23,7 +23,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        {/* 랜딩 페이지는 헤더만 표시 */}
+        {/* Landing page shows only header */}
         <Route 
           path="/" 
           element={
@@ -33,7 +33,7 @@ function App() {
             </>
           } 
         />
-        {/* 문서 페이지는 Layout 사용 */}
+        {/* Docs pages use Layout */}
         {routes.map((route) => (
           <Route 
             key={route.path} 

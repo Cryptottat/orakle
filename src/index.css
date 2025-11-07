@@ -1,4 +1,4 @@
-/* Surgena 폰트 로드 */
+/* Load Surgena font */
 @font-face {
   font-family: 'Surgena';
   src: url('/Surgena-Bold.otf') format('opentype');
@@ -16,7 +16,7 @@
 }
 
 :root {
-  /* 색상 시스템 */
+  /* Color system */
   --color-bg: #ffffff;
   --color-text: #1a1a1a;
   --color-text-secondary: rgba(26, 26, 26, 0.6);
@@ -25,7 +25,7 @@
   --color-border: rgba(26, 26, 26, 0.1);
   --color-border-hover: rgba(26, 26, 26, 0.2);
   
-  /* 타이포그래피 */
+  /* Typography */
   --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --font-surgena: 'Surgena', sans-serif;
   --font-size-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
@@ -35,25 +35,25 @@
   --font-size-xl: clamp(1.5rem, 1.3rem + 1vw, 2.25rem);
   --font-size-2xl: clamp(2rem, 1.7rem + 1.5vw, 3rem);
   
-  /* 간격 */
+  /* Spacing */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 1.5rem;
   --spacing-lg: 2rem;
   --spacing-xl: 4rem;
   
-  /* 애니메이션 */
+  /* Animation */
   --easing: cubic-bezier(0.23, 1, 0.32, 1);
   --transition-fast: 0.15s var(--easing);
   --transition-base: 0.3s var(--easing);
   --transition-slow: 0.5s var(--easing);
   
-  /* 그림자 */
+  /* Shadows */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.04);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.08);
   
-  /* 블러 */
+  /* Blur */
   --blur-sm: blur(8px);
   --blur-md: blur(20px);
   --blur-lg: blur(40px);
@@ -98,7 +98,7 @@ button {
   transition: all var(--transition-fast);
 }
 
-/* 스크롤바 스타일링 */
+/* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;

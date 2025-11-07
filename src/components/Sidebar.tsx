@@ -7,7 +7,7 @@ export default function Sidebar() {
   const location = useLocation()
   const routes = createRoutesFromDocs(docsData)
   
-  // L1 그룹화
+  // Group by L1
   const l1Groups = routes.reduce((acc, route) => {
     if (!acc[route.l1]) {
       acc[route.l1] = {}

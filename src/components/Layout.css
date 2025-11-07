@@ -7,7 +7,7 @@
 .layout-body {
   display: flex;
   flex: 1;
-  margin-top: 64px; /* 헤더 높이 */
+  margin-top: 64px; /* Header height */
 }
 
 .layout-main {

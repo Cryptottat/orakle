@@ -10,7 +10,7 @@
   flex-direction: column;
 }
 
-/* 테크니컬 배경 효과 컨테이너 */
+/* Technical background effects container */
 .tech-background {
   position: absolute;
   top: 0;
@@ -22,7 +22,7 @@
   pointer-events: none;
 }
 
-/* 3D 변형 그리드 */
+/* 3D transformed grid */
 .tech-grid {
   position: absolute;
   top: 0;
@@ -39,7 +39,7 @@
   opacity: 0.75;
 }
 
-/* 웨이브 패턴 */
+/* Wave patterns */
 .tech-wave {
   position: absolute;
   width: 200%;
@@ -86,7 +86,7 @@
   transform: rotate(-2deg);
 }
 
-/* 글로우 링 효과 */
+/* Glow ring effects */
 .tech-glow-ring {
   position: absolute;
   border-radius: 50%;
@@ -114,7 +114,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
-  padding: 12% 3% 3% 12%; /* 우측 하단에 더 배치 */
+  padding: 12% 3% 3% 12%; /* Position to bottom right */
   clip-path: circle(50% at center);
 }
 
@@ -123,15 +123,15 @@
   height: 110%;
   object-fit: contain;
   filter: 
-    hue-rotate(180deg) /* 모든 색상을 녹색 톤으로 변경 (파란→녹색 포함) */
+    hue-rotate(180deg) /* Convert all colors to green tone (including blue to green) */
     saturate(1.3)
-    brightness(0.85) /* 살짝 어둡게 */
+    brightness(0.85) /* Slightly darker */
     contrast(1.1)
-    blur(8px); /* 블러 처리 */
-  opacity: 0.4; /* 투명도 많이 올림 */
+    blur(8px); /* Blur effect */
+  opacity: 0.4; /* Increased transparency */
   mix-blend-mode: multiply;
   transform-origin: center;
-  animation: imagePulse 18s ease-in-out infinite; /* 원형(8초)보다 한참 느린 박자 */
+  animation: imagePulse 18s ease-in-out infinite; /* Much slower than ring (8s) */
 }
 
 @keyframes imagePulse {
@@ -163,7 +163,7 @@
   box-shadow: 0 0 30px rgba(245, 245, 220, 0.15);
 }
 
-/* 기하학적 도형 - 3D 변형 */
+/* Geometric shapes - 3D transformed */
 .tech-geometric {
   position: absolute;
   opacity: 0.2;
@@ -203,7 +203,7 @@
   transform-style: preserve-3d;
 }
 
-/* 데이터 스트림 효과 */
+/* Data stream effects */
 .tech-stream {
   position: absolute;
   width: 2px;
@@ -239,72 +239,72 @@
   );
 }
 
-/* 메인 히어로 섹션 - 비대칭 레이아웃 */
+/* Main hero section - asymmetric layout */
 .landing-hero {
   position: relative;
   z-index: 3;
   width: 100%;
   max-width: 1600px;
   margin: 0 auto;
-  padding: calc(64px + 1.5rem) 6rem 2rem 6rem; /* 헤더 높이(64px) + 최소 여백 */
+  padding: calc(64px + 1.5rem) 6rem 2rem 6rem; /* Header height (64px) + minimum margin */
   display: grid;
-  grid-template-columns: 61.8% 38.2%; /* 황금비율 */
-  gap: 4rem; /* 간격 축소 */
-  align-items: flex-start; /* 위쪽 정렬로 변경 */
-  height: calc(100vh - 64px); /* 정확한 높이 */
+  grid-template-columns: 61.8% 38.2%; /* Golden ratio */
+  gap: 4rem; /* Reduced spacing */
+  align-items: flex-start; /* Top alignment */
+  height: calc(100vh - 64px); /* Exact height */
   box-sizing: border-box;
 }
 
-/* 왼쪽 영역 */
+/* Left area */
 .hero-left {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem; /* 간격 축소 */
+  gap: 1.2rem; /* Reduced spacing */
   position: relative;
-  padding-top: 0; /* 오프셋 제거 */
+  padding-top: 0; /* Remove offset */
   justify-content: flex-start;
 }
 
 .hero-label {
   display: flex;
   align-items: center;
-  gap: 1rem; /* 간격 축소 */
+  gap: 1rem; /* Reduced spacing */
   opacity: 0;
   transform: translateX(-30px);
   animation: fadeInLeft 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
-  margin-bottom: 0.8rem; /* 간격 축소 */
+  margin-bottom: 0.8rem; /* Reduced spacing */
 }
 
 .label-line {
-  width: 4.236rem; /* 황금비율 기반 */
+  width: 4.236rem; /* Based on golden ratio */
   height: 1px;
   background: linear-gradient(90deg, #4CAF50, transparent);
 }
 
 .label-text {
   font-family: var(--font-surgena, 'Surgena', sans-serif);
-  font-size: clamp(0.75rem, 0.9vw, 0.9rem); /* 모듈러 스케일 */
+  font-size: clamp(0.75rem, 0.9vw, 0.9rem); /* Modular scale */
   font-weight: 400;
-  letter-spacing: 0.12em; /* 수학적 조정 */
+  letter-spacing: 0.12em; /* Mathematical adjustment */
   text-transform: uppercase;
   color: rgba(26, 26, 26, 0.5);
-  line-height: 1.618; /* 황금비율 */
+  line-height: 1.618; /* Golden ratio */
 }
 
-/* 제목 - 자연스러운 배치 */
+/* Title - natural placement */
 .hero-title {
   font-family: var(--font-surgena, 'Surgena', sans-serif);
-  font-size: clamp(3rem, 8vw, 6rem); /* 크기 축소 */
+  font-size: clamp(3rem, 8vw, 6rem); /* Reduced size */
   font-weight: 700;
-  line-height: 1.1; /* 자연스러운 줄 간격 */
-  letter-spacing: -0.03em; /* 미세 조정 */
+  line-height: 1.1; /* Natural line spacing */
+  letter-spacing: -0.03em; /* Fine adjustment */
   color: #1a1a1a;
   margin: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.05em; /* 간격 축소 */
+  gap: 0.05em; /* Reduced spacing */
   position: relative;
-  margin-bottom: 1rem; /* 간격 축소 */
+  margin-bottom: 1rem; /* Reduced spacing */
 }
 
 .title-word {
@@ -322,13 +322,13 @@
 .title-word.word-2 {
   align-self: flex-start;
   transform-origin: left bottom;
-  margin-left: 0; /* 왼쪽 정렬로 통일 */
+  margin-left: 0; /* Unified left alignment */
 }
 
 .title-word.word-3 {
   align-self: flex-start;
-  font-size: 0.35em; /* 약간 더 작게 */
-  margin-top: 0.3em; /* 간격 축소 */
+  font-size: 0.35em; /* Slightly smaller */
+  margin-top: 0.3em; /* Reduced spacing */
   margin-left: 0;
   color: #4CAF50;
   transform-origin: left top;
@@ -336,25 +336,25 @@
   font-weight: 600;
 }
 
-/* 태그라인 */
+/* Tagline */
 .hero-tagline {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem; /* 간격 축소 */
-  margin-top: 0.8rem; /* 간격 축소 */
+  gap: 0.2rem; /* Reduced spacing */
+  margin-top: 0.8rem; /* Reduced spacing */
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
-  max-width: 85%; /* 황금비율 기반 너비 */
+  max-width: 85%; /* Width based on golden ratio */
 }
 
 .tagline-main {
   font-family: var(--font-surgena, 'Surgena', sans-serif);
-  font-size: clamp(1.2rem, 2.5vw, 1.8rem); /* 크기 축소 */
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem); /* Reduced size */
   font-weight: 400;
-  letter-spacing: -0.015em; /* 미세 조정 */
+  letter-spacing: -0.015em; /* Fine adjustment */
   color: #1a1a1a;
-  line-height: 1.3; /* 간격 축소 */
+  line-height: 1.3; /* Reduced spacing */
 }
 
 .tagline-sub {
@@ -366,15 +366,15 @@
   margin-left: 0.5rem;
 }
 
-/* 오른쪽 영역 */
+/* Right area */
 .hero-right {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem; /* 간격 축소 */
-  justify-content: flex-start; /* 위쪽 정렬 */
+  gap: 1.5rem; /* Reduced spacing */
+  justify-content: flex-start; /* Top alignment */
   position: relative;
-  padding-top: 0; /* 오프셋 제거 */
-  align-items: flex-end; /* 우측 정렬 */
+  padding-top: 0; /* Remove offset */
+  align-items: flex-end; /* Right alignment */
 }
 
 .hero-query-text {
@@ -393,15 +393,15 @@
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
-  max-width: 90%; /* 황금비율 기반 너비 */
-  text-align: right; /* 우측 정렬 */
+  max-width: 90%; /* Width based on golden ratio */
+  text-align: right; /* Right alignment */
 }
 
 .hero-description {
   font-family: var(--font-surgena, 'Surgena', sans-serif);
-  font-size: clamp(1rem, 1.3vw, 1.3rem); /* 크기 축소 */
-  line-height: 1.5; /* 간격 축소 */
-  letter-spacing: -0.008em; /* 미세 조정 */
+  font-size: clamp(1rem, 1.3vw, 1.3rem); /* Reduced size */
+  line-height: 1.5; /* Reduced spacing */
+  letter-spacing: -0.008em; /* Fine adjustment */
   color: rgba(26, 26, 26, 0.7);
   margin: 0;
   font-weight: 400;
@@ -436,7 +436,7 @@
   font-style: italic;
 }
 
-/* 장식 요소 */
+/* Decorative elements */
 .hero-decoration {
   display: flex;
   align-items: center;
@@ -462,9 +462,9 @@
   background: linear-gradient(90deg, rgba(76, 175, 80, 0.3), transparent);
 }
 
-/* 하단 장식 */
+/* Bottom decoration */
 .landing-footer {
-  display: none; /* 뷰포트에 맞추기 위해 숨김 */
+  display: none; /* Hidden to fit viewport */
 }
 
 .footer-line {
@@ -481,7 +481,7 @@
   color: rgba(26, 26, 26, 0.4);
 }
 
-/* 애니메이션 */
+/* Animations */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -558,7 +558,7 @@
   }
 }
 
-/* 테크니컬 효과 애니메이션 */
+/* Technical effects animations */
 @keyframes gridFlow {
   0% {
     transform: perspective(1000px) rotateX(60deg) translateY(-20%) translateZ(0);
@@ -697,22 +697,22 @@
   }
 }
 
-/* 반응형 디자인 */
+/* Responsive design */
 @media (max-width: 1200px) {
   .landing-hero {
     grid-template-columns: 1fr;
-    gap: 2rem; /* 간격 축소 */
-    padding: calc(64px + 1rem) 4rem 2rem 4rem; /* 헤더 높이 고려, 간격 축소 */
+    gap: 2rem; /* Reduced spacing */
+    padding: calc(64px + 1rem) 4rem 2rem 4rem; /* Header height considered, reduced spacing */
     height: calc(100vh - 64px);
   }
 
   .hero-right {
-    max-width: 618px; /* 황금비율 기반 */
-    align-items: flex-start; /* 모바일에서는 좌측 정렬 */
+    max-width: 618px; /* Based on golden ratio */
+    align-items: flex-start; /* Left alignment on mobile */
   }
 
   .hero-description-wrapper {
-    text-align: left; /* 모바일에서는 좌측 정렬 */
+    text-align: left; /* Left alignment on mobile */
   }
 
   .landing-line.golden-vertical {
@@ -726,18 +726,18 @@
   }
 
   .landing-hero {
-    padding: calc(64px + 0.8rem) 2rem 1.5rem 2rem; /* 헤더 높이 고려, 간격 축소 */
-    gap: 1.5rem; /* 간격 축소 */
+    padding: calc(64px + 0.8rem) 2rem 1.5rem 2rem; /* Header height considered, reduced spacing */
+    gap: 1.5rem; /* Reduced spacing */
     height: calc(100vh - 64px);
   }
 
   .hero-left {
-    gap: 1rem; /* 간격 축소 */
+    gap: 1rem; /* Reduced spacing */
     padding-top: 0;
   }
 
   .hero-right {
-    gap: 1rem; /* 간격 축소 */
+    gap: 1rem; /* Reduced spacing */
     padding-top: 0;
   }
 

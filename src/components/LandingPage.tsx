@@ -6,7 +6,7 @@ export default function LandingPage() {
   const gridRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    // 그리드 패럴랙스 효과
+    // Grid parallax effect
     const handleScroll = () => {
       if (gridRef.current) {
         const scrollY = window.scrollY
@@ -22,17 +22,17 @@ export default function LandingPage() {
 
   return (
     <div className="landing-page">
-      {/* 테크니컬 배경 효과 */}
+      {/* Technical background effects */}
       <div className="tech-background">
-        {/* 3D 변형 그리드 */}
+        {/* 3D transformed grid */}
         <div className="tech-grid" ref={gridRef}></div>
         
-        {/* 웨이브 패턴 */}
+        {/* Wave patterns */}
         <div className="tech-wave wave-1"></div>
         <div className="tech-wave wave-2"></div>
         <div className="tech-wave wave-3"></div>
         
-        {/* 글로우 링 효과 */}
+        {/* Glow ring effects */}
         <div className="tech-glow-ring ring-1">
           <div className="ring-image-container">
             <img src="/12.png" alt="" className="ring-image" />
@@ -41,19 +41,19 @@ export default function LandingPage() {
         <div className="tech-glow-ring ring-2"></div>
         <div className="tech-glow-ring ring-3"></div>
         
-        {/* 기하학적 도형 - 3D 변형 */}
+        {/* Geometric shapes - 3D transformed */}
         <div className="tech-geometric geo-1"></div>
         <div className="tech-geometric geo-2"></div>
         <div className="tech-geometric geo-3"></div>
         
-        {/* 데이터 스트림 효과 */}
+        {/* Data stream effects */}
         <div className="tech-stream stream-1"></div>
         <div className="tech-stream stream-2"></div>
       </div>
 
-      {/* 메인 콘텐츠 - 비대칭 레이아웃 */}
+      {/* Main content - asymmetric layout */}
       <div className="landing-hero" ref={heroRef}>
-        {/* 왼쪽 영역 - 황금비율 61.8% */}
+        {/* Left area - golden ratio 61.8% */}
         <div className="hero-left">
           <div className="hero-label" style={{ animationDelay: '0s' }}>
             <span className="label-line"></span>
@@ -77,7 +77,7 @@ export default function LandingPage() {
           </div>
         </div>
 
-        {/* 오른쪽 영역 - 황금비율 38.2% */}
+        {/* Right area - golden ratio 38.2% */}
         <div className="hero-right">
           <div className="hero-description-wrapper" style={{ animationDelay: '0.5s' }}>
             <p className="hero-description">
@@ -87,7 +87,7 @@ export default function LandingPage() {
             </p>
           </div>
 
-          {/* 장식적 요소 */}
+          {/* Decorative elements */}
           <div className="hero-decoration" style={{ animationDelay: '0.6s' }}>
             <div className="decoration-dot"></div>
             <div className="decoration-line"></div>
@@ -96,7 +96,7 @@ export default function LandingPage() {
         </div>
       </div>
 
-      {/* 하단 장식 요소 */}
+      {/* Bottom decorative elements */}
       <div className="landing-footer">
         <div className="footer-line"></div>
         <div className="footer-text">Orakle</div>

@@ -43,7 +43,7 @@ function formatContent(content: string): JSX.Element {
   lines.forEach((line, index) => {
     if (line.startsWith('```')) {
       if (inCodeBlock) {
-        // 코드 블록 종료
+        // End code block
         elements.push(
           <pre key={`code-${index}`} className="code-block">
             <code>{codeBlock.trim()}</code>
@@ -52,7 +52,7 @@ function formatContent(content: string): JSX.Element {
         codeBlock = ''
         inCodeBlock = false
       } else {
-        // 코드 블록 시작
+        // Start code block
         inCodeBlock = true
       }
       return
@@ -83,7 +83,7 @@ function formatContent(content: string): JSX.Element {
       return
     }
 
-    // 인라인 코드 처리
+    // Inline code processing
     const parts = line.split(/(`[^`]+`)/g)
     if (parts.length > 1) {
       elements.push(

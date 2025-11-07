@@ -10,7 +10,7 @@ export default function Header() {
     <header className="header">
       <div className="header-container">
         <Link to="/" className="header-logo">
-          <img src="/logo_tr.png" alt="Orakle Logo" className="logo-image" />
+          <img src="/logo_tr_fit.png" alt="Orakle Logo" className="logo-image" />
           <span className="logo-text">orakle</span>
         </Link>
         <nav className="header-nav">

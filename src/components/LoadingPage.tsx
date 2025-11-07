@@ -12,7 +12,7 @@ export default function LoadingPage({ onComplete }: LoadingPageProps) {
   useEffect(() => {
     let progressInterval: number | null = null
 
-    // 0.05초 딜레이 후 진행률 애니메이션 시작
+    // Start progress animation after 50ms delay
     const startDelay = setTimeout(() => {
       progressInterval = setInterval(() => {
         setProgress((prev) => {
@@ -25,15 +25,15 @@ export default function LoadingPage({ onComplete }: LoadingPageProps) {
           return prev + 2
         })
       }, 30)
-    }, 50) // 0.05초 딜레이
+    }, 50)
 
-    // 완료 후 페이드아웃
+    // Fade out after completion
     const fadeTimer = setTimeout(() => {
       setFadeOut(true)
       setTimeout(() => {
         onComplete()
       }, 500)
-    }, 2050) // 딜레이 시간 추가
+    }, 2050)
 
     return () => {
       clearTimeout(startDelay)
@@ -46,7 +46,7 @@ export default function LoadingPage({ onComplete }: LoadingPageProps) {
 
   return (
     <div className={`loading-page ${fadeOut ? 'fade-out' : ''}`}>
-      {/* 전체 화면 녹색 오버레이 */}
+      {/* Full screen green overlay */}
       <div 
         className="loading-overlay" 
         style={{ width: `${progress}%` }}

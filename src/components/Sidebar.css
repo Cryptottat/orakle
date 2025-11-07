@@ -128,7 +128,7 @@
   left: calc(var(--spacing-lg) - 1px);
 }
 
-/* 스크롤바 스타일링 */
+/* Scrollbar styling */
 .sidebar::-webkit-scrollbar {
   width: 6px;
 }
