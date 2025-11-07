@@ -39,7 +39,6 @@ function formatContent(content: string): JSX.Element {
   const elements: JSX.Element[] = []
   let codeBlock = ''
   let inCodeBlock = false
-  let codeLanguage = ''
 
   lines.forEach((line, index) => {
     if (line.startsWith('```')) {
@@ -52,10 +51,8 @@ function formatContent(content: string): JSX.Element {
         )
         codeBlock = ''
         inCodeBlock = false
-        codeLanguage = ''
       } else {
         // 코드 블록 시작
-        codeLanguage = line.replace('```', '').trim()
         inCodeBlock = true
       }
       return

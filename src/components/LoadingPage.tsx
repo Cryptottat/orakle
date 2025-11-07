@@ -10,7 +10,7 @@ export default function LoadingPage({ onComplete }: LoadingPageProps) {
   const [fadeOut, setFadeOut] = useState(false)
 
   useEffect(() => {
-    let progressInterval: NodeJS.Timeout | null = null
+    let progressInterval: number | null = null
 
     // 0.05초 딜레이 후 진행률 애니메이션 시작
     const startDelay = setTimeout(() => {
