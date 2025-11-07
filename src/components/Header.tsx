@@ -14,7 +14,7 @@ export default function Header() {
           <span className="logo-text">orakle</span>
         </Link>
         <nav className="header-nav">
-          <a href="https://x.com" target="_blank" rel="noopener noreferrer" className="nav-link">
+          <a href="https://x.com/orakledotnet" target="_blank" rel="noopener noreferrer" className="nav-link">
             x
           </a>
           <Link to="/introduction/overview/what-is-orakle" className={`nav-link ${isDocs ? 'active' : ''}`}>
