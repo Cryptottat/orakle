@@ -1,0 +1,49 @@
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout-body {
+  display: flex;
+  flex: 1;
+  margin-top: 64px; /* 헤더 높이 */
+}
+
+.layout-main {
+  flex: 1;
+  padding: var(--spacing-xl);
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  animation: fadeIn 0.6s var(--easing);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .layout-body {
+    flex-direction: column;
+  }
+  
+  .layout-main {
+    padding: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 768px) {
+  .layout-main {
+    padding: var(--spacing-md);
+  }
+}
+
+
