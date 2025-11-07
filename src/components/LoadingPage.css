@@ -41,6 +41,13 @@
   z-index: 2;
 }
 
+.loading-logo-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .loading-logo {
   font-size: clamp(2rem, 5vw, 3.5rem);
   font-weight: 700;
@@ -48,6 +55,19 @@
   color: #1a1a1a;
   opacity: 0;
   animation: fadeInLogo 0.6s cubic-bezier(0.23, 1, 0.32, 1) 0.2s forwards;
+  position: relative;
+  z-index: 2;
+}
+
+.loading-logo-image {
+  position: absolute;
+  width: clamp(12rem, 25vw, 20rem);
+  height: auto;
+  opacity: 0;
+  z-index: 1;
+  filter: brightness(0) invert(1); /* Convert to white */
+  animation: logoFadeIn 0.15s ease-out forwards;
+  transform-origin: center;
 }
 
 .loading-progress-container {
@@ -102,6 +122,15 @@
   }
   100% {
     transform: translateX(100%);
+  }
+}
+
+@keyframes logoFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 

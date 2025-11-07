@@ -17,6 +17,16 @@
   opacity: 0.85;
 }
 
+/* Disable interactions for all buttons in app pages */
+.page-content-wrapper button {
+  cursor: not-allowed !important;
+  pointer-events: none !important;
+}
+
+.page-content-wrapper button:hover {
+  cursor: not-allowed !important;
+}
+
 .page-preview-overlay {
   position: absolute;
   top: 0;

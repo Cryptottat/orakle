@@ -8,6 +8,7 @@ interface LoadingPageProps {
 export default function LoadingPage({ onComplete }: LoadingPageProps) {
   const [progress, setProgress] = useState(0)
   const [fadeOut, setFadeOut] = useState(false)
+  const [showLogo, setShowLogo] = useState(false)
 
   useEffect(() => {
     let progressInterval: number | null = null
@@ -20,6 +21,8 @@ export default function LoadingPage({ onComplete }: LoadingPageProps) {
             if (progressInterval) {
               clearInterval(progressInterval)
             }
+            // Show logo when progress reaches 100%
+            setShowLogo(true)
             return 100
           }
           return prev + 2
@@ -27,13 +30,13 @@ export default function LoadingPage({ onComplete }: LoadingPageProps) {
       }, 30)
     }, 50)
 
-    // Fade out after completion
+    // Fade out after logo appears (wait for logo animation to complete)
     const fadeTimer = setTimeout(() => {
       setFadeOut(true)
       setTimeout(() => {
         onComplete()
       }, 500)
-    }, 2050)
+    }, 2350) // 2050ms (progress) + 300ms (logo animation)
 
     return () => {
       clearTimeout(startDelay)
@@ -53,7 +56,16 @@ export default function LoadingPage({ onComplete }: LoadingPageProps) {
       ></div>
       
       <div className="loading-content">
-        <div className="loading-logo">orakle</div>
+        <div className="loading-logo-wrapper">
+          <div className="loading-logo">orakle</div>
+          {showLogo && (
+            <img 
+              src="/logo_tr_fit.png" 
+              alt="Orakle Logo" 
+              className="loading-logo-image"
+            />
+          )}
+        </div>
         <div className="loading-progress-container">
           <div 
             className="loading-progress-bar" 
