@@ -6,6 +6,7 @@ import Header from './components/Header'
 import LoadingPage from './components/LoadingPage'
 import AppPage from './components/AppPage'
 import DashboardPage from './components/DashboardPage'
+import TerminalPage from './components/TerminalPage'
 import QueryPage from './components/QueryPage'
 import BillingPage from './components/BillingPage'
 import FeedsPage from './components/FeedsPage'
@@ -50,24 +51,33 @@ function App() {
             </>
           } 
         />
-        <Route 
-          path="/app/dashboard" 
-          element={
-            <>
-              <Header />
-              <DashboardPage />
-            </>
-          } 
-        />
-        <Route 
-          path="/app/query" 
-          element={
-            <>
-              <Header />
-              <QueryPage />
-            </>
-          } 
-        />
+            <Route
+              path="/app/dashboard"
+              element={
+                <>
+                  <Header />
+                  <DashboardPage />
+                </>
+              }
+            />
+            <Route
+              path="/app/terminal"
+              element={
+                <>
+                  <Header />
+                  <TerminalPage />
+                </>
+              }
+            />
+            <Route
+              path="/app/query"
+              element={
+                <>
+                  <Header />
+                  <QueryPage />
+                </>
+              }
+            />
         <Route 
           path="/app/billing" 
           element={

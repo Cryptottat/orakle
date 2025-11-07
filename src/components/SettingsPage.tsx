@@ -39,54 +39,47 @@ export default function SettingsPage() {
           {/* Change Password section */}
           <div style={{ marginBottom: '3rem' }}>
             <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Change Password</h2>
-            <div style={{ marginBottom: '1rem' }}>
-              <label style={{ display: 'block', fontSize: '0.875rem', color: 'rgba(26, 26, 26, 0.6)', marginBottom: '0.5rem' }}>
-                Current Password
-              </label>
-              <input
-                type="password"
-                placeholder="Enter current password"
-                style={{
-                  width: '100%',
-                  padding: '0.75rem 1rem',
-                  borderRadius: '8px',
-                  border: '1px solid rgba(26, 26, 26, 0.1)',
-                  fontSize: '1rem',
-                  fontFamily: 'inherit'
-                }}
-              />
-            </div>
-            <div style={{ marginBottom: '1rem' }}>
-              <label style={{ display: 'block', fontSize: '0.875rem', color: 'rgba(26, 26, 26, 0.6)', marginBottom: '0.5rem' }}>
-                New Password
-              </label>
-              <input
-                type="password"
-                placeholder="Enter new password"
-                style={{
-                  width: '100%',
-                  padding: '0.75rem 1rem',
-                  borderRadius: '8px',
-                  border: '1px solid rgba(26, 26, 26, 0.1)',
-                  fontSize: '1rem',
-                  fontFamily: 'inherit'
-                }}
-              />
-            </div>
+            <button
+              disabled
+              style={{
+                padding: '0.75rem 2rem',
+                background: 'rgba(26, 26, 26, 0.1)',
+                color: 'rgba(26, 26, 26, 0.4)',
+                border: 'none',
+                borderRadius: '6px',
+                fontSize: '1rem',
+                fontWeight: '500',
+                cursor: 'not-allowed'
+              }}
+            >
+              Change Password
+            </button>
           </div>
 
           {/* Notifications section */}
           <div style={{ marginBottom: '3rem' }}>
             <h2 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>Notifications</h2>
-            <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-              <input
-                type="checkbox"
-                id="low-balance"
-                style={{ width: '18px', height: '18px', cursor: 'pointer' }}
-              />
-              <label htmlFor="low-balance" style={{ fontSize: '0.875rem', color: '#1a1a1a', cursor: 'pointer' }}>
-                Email me on low balance
-              </label>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                <input
+                  type="checkbox"
+                  id="low-balance"
+                  style={{ width: '18px', height: '18px', cursor: 'pointer' }}
+                />
+                <label htmlFor="low-balance" style={{ fontSize: '0.875rem', color: '#1a1a1a', cursor: 'pointer' }}>
+                  Email me on low balance
+                </label>
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+                <input
+                  type="checkbox"
+                  id="app-notifications"
+                  style={{ width: '18px', height: '18px', cursor: 'pointer' }}
+                />
+                <label htmlFor="app-notifications" style={{ fontSize: '0.875rem', color: '#1a1a1a', cursor: 'pointer' }}>
+                  App
+                </label>
+              </div>
             </div>
           </div>
 

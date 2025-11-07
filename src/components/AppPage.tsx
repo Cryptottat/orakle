@@ -8,6 +8,7 @@ export function AppSubHeader() {
 
   const menuItems = [
     { name: 'Dashboard', path: '/app/dashboard' },
+    { name: 'Terminal', path: '/app/terminal' },
     { name: 'Query', path: '/app/query' },
     { name: 'Billing', path: '/app/billing' },
     { name: 'Feeds', path: '/app/feeds' },
