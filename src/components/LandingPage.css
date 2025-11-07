@@ -440,12 +440,12 @@
 .hero-decoration {
   display: flex;
   align-items: center;
-  gap: 1rem; /* 간격 축소 */
+  gap: 1rem; /* Reduced spacing */
   opacity: 0;
   transform: translateX(-20px);
   animation: fadeInLeft 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
-  margin-top: 1rem; /* 간격 축소 */
-  align-self: flex-end; /* 우측 정렬 */
+  margin-top: 1rem; /* Reduced spacing */
+  align-self: flex-end; /* Right alignment */
 }
 
 .decoration-dot {
